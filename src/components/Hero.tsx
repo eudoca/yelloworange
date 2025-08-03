@@ -104,38 +104,23 @@ const Hero = memo(() => {
 
           {/* Right side - Visual */}
           <div className="relative lg:block hidden">
-            {/* Modern data visualization placeholder */}
+            {/* Hero Image */}
             <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-soft border border-neutral-200">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-neutral-900">Analytics Dashboard</h3>
-                    <BarChart3 className="w-6 h-6 text-primary-500" />
-                  </div>
-                  
-                  {/* Fake chart bars */}
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="text-sm text-neutral-600 w-16">Jan</div>
-                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
-                        <div className="bg-primary-500 h-2 rounded-full w-3/4"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-sm text-neutral-600 w-16">Feb</div>
-                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
-                        <div className="bg-primary-500 h-2 rounded-full w-4/5"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-sm text-neutral-600 w-16">Mar</div>
-                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
-                        <div className="bg-accent-500 h-2 rounded-full w-full"></div>
-                      </div>
-                    </div>
-                  </div>
+              <img 
+                src="/datasing_hero.jpg" 
+                alt="DataSing - Data Analytics and AI Solutions"
+                className={`w-full h-auto object-cover rounded-2xl shadow-soft border border-neutral-200 transition-opacity duration-500 ${
+                  imageLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
+                loading="eager"
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+              />
+              {!imageLoaded && (
+                <div className="w-full h-80 bg-neutral-200 animate-pulse rounded-2xl flex items-center justify-center">
+                  <div className="text-neutral-500 text-lg">Loading...</div>
                 </div>
-              </div>
+              )}
               
               {/* Floating stats cards */}
               <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-medium p-4 border border-neutral-200 animate-float">
