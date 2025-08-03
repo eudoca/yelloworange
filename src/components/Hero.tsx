@@ -137,8 +137,6 @@ const Hero = memo(() => {
         </div>
       </div>
       
-      {/* Subtle curved transition */}
-      <ShapeDivider type="curve" color="#171717" />
     </section>
   );
 });
