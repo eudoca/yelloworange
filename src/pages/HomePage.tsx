@@ -5,7 +5,7 @@ import ShapeDivider from '../components/ShapeDivider';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 // Lazy load components that are below the fold
-const Industries = lazy(() => import('../components/Industries'));
+const WhyDataSing = lazy(() => import('../components/WhyDataSing'));
 const Clients = lazy(() => import('../components/Clients'));
 const Stats = lazy(() => import('../components/Stats'));
 const Solutions = lazy(() => import('../components/Solutions'));
@@ -26,13 +26,11 @@ export default function HomePage() {
       <Services />
       <ShapeDivider type="layered" color="#f8fafc" animated={true} />
       
-      <div className="bg-slate-50">
-        <ErrorBoundary>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Industries />
-          </Suspense>
-        </ErrorBoundary>
-      </div>
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingSpinner />}>
+          <WhyDataSing />
+        </Suspense>
+      </ErrorBoundary>
       <ShapeDivider type="wave" color="#f8fafc" animated={true} />
       
       <div className="bg-gray-50">
