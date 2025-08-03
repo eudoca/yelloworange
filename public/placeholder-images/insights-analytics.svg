@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="480" height="320" rx="8" fill="url(#paint0_linear)" />
+
+  <!-- Analytics visualization elements -->
+  <path d="M120,220 Q170,120 220,180 T320,140 Q370,100 420,180" stroke="#FB923C" stroke-width="3" fill="none" />
+  <path d="M120,240 Q170,200 220,220 T320,200 Q370,180 420,220" stroke="#F97316" stroke-width="3" fill="none" />
+  
+  <!-- Data points -->
+  <circle cx="170" cy="120" r="5" fill="#FB923C" />
+  <circle cx="220" cy="180" r="5" fill="#FB923C" />
+  <circle cx="270" cy="140" r="5" fill="#FB923C" />
+  <circle cx="320" cy="140" r="5" fill="#FB923C" />
+  <circle cx="370" cy="100" r="5" fill="#FB923C" />
+
+  <circle cx="170" cy="200" r="5" fill="#F97316" />
+  <circle cx="220" cy="220" r="5" fill="#F97316" />
+  <circle cx="270" cy="210" r="5" fill="#F97316" />
+  <circle cx="320" cy="200" r="5" fill="#F97316" />
+  <circle cx="370" cy="180" r="5" fill="#F97316" />
+  
+  <!-- Grid lines -->
+  <line x1="120" y1="80" x2="120" y2="260" stroke="#E5E7EB" stroke-width="1" />
+  <line x1="120" y1="260" x2="420" y2="260" stroke="#E5E7EB" stroke-width="1" />
+  <line x1="120" y1="220" x2="420" y2="220" stroke="#E5E7EB" stroke-width="0.5" stroke-dasharray="4 4" />
+  <line x1="120" y1="180" x2="420" y2="180" stroke="#E5E7EB" stroke-width="0.5" stroke-dasharray="4 4" />
+  <line x1="120" y1="140" x2="420" y2="140" stroke="#E5E7EB" stroke-width="0.5" stroke-dasharray="4 4" />
+  <line x1="120" y1="100" x2="420" y2="100" stroke="#E5E7EB" stroke-width="0.5" stroke-dasharray="4 4" />
+  
+  <!-- Label text -->
+  <text x="240" y="310" fill="#6B7280" text-anchor="middle">Insights Analytics</text>
+  
+  <!-- Title text -->
+  <text x="240" y="50" fill="#1F2937" font-size="16" font-weight="bold" text-anchor="middle">Insights &amp; Analytics</text>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="480" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FAFB" />
+      <stop offset="1" stop-color="#F3F4F6" />
+    </linearGradient>
+  </defs>
+</svg> 

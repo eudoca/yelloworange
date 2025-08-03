@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Managed Services</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F9FAFB" x="0" y="0" width="128" height="128" rx="8"></rect>
+        <g transform="translate(14.000000, 14.000000)" stroke="#6B7280" stroke-width="2">
+            <rect x="0" y="0" width="100" height="100" rx="4"></rect>
+            <path d="M20,16 L80,16" stroke-linecap="round"></path>
+            <path d="M20,32 L80,32" stroke-linecap="round"></path>
+            <path d="M20,48 L80,48" stroke-linecap="round"></path>
+            <path d="M20,64 L80,64" stroke-linecap="round"></path>
+            <path d="M20,80 L60,80" stroke-linecap="round"></path>
+            <circle cx="80" cy="80" r="12"></circle>
+            <path d="M74,80 L86,80" stroke-linecap="round"></path>
+            <path d="M80,74 L80,86" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg> 
