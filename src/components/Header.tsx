@@ -37,7 +37,7 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
   const searchData = useMemo(() => [
     { title: 'Advisory & Delivery Services', content: 'End-to-end data consulting from strategy to implementation', path: '/what-we-do' },
     { title: 'AI & LLM Services', content: 'Enterprise-ready AI solutions including KeaAI', path: '/what-we-do' },
-    { title: 'Platform Services', content: 'Pre-built Azure data warehouse solutions', path: '/what-we-do' },
+    { title: 'Platform Services', content: 'Pre-built Azure, Snowflake, and Databricks data warehouse solutions', path: '/what-we-do' },
     { title: 'Managed Services', content: 'Ongoing support and management for optimal platform performance', path: '/what-we-do' },
     { title: 'Industries', content: 'Utilities, Transport, Property, Education, Health, Government, Financial Services', path: '/industries' },
     { title: 'Training Programs', content: 'Professional data and analytics training courses and webinars', path: '/training' },

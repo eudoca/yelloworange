@@ -49,6 +49,11 @@ const Hero = memo(() => {
                     alt="Snowflake Partner" 
                     className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
                   />
+                  <img 
+                    src="/databricks-partner.png" 
+                    alt="Databricks Partner" 
+                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  />
                 </div>
               </div>
             </div>
