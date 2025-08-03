@@ -10,7 +10,7 @@ const Services = memo(() => {
       icon: <Cloud className="w-8 h-8" />,
       title: "Modern Azure Lake-house",
       subtitle: "Migration Accelerated",
-      description: "Migrate legacy warehouses to Fabric, Synapse or Databricks in weeks, not months.",
+      description: "Transform your legacy data warehouse into a modern, cloud-native lakehouse architecture. Our proven migration methodology and pre-built frameworks accelerate your journey to Azure Fabric, Synapse Analytics, or Databricks—delivering enterprise-grade solutions in weeks rather than the traditional months-long approach. We handle the complexity of data migration, schema transformation, and performance optimisation while ensuring zero data loss and minimal business disruption.",
       features: ["Azure Fabric Migration", "Synapse Analytics", "Databricks Integration", "Legacy Modernisation"],
       highlight: "Weeks, not months",
       color: "from-blue-500 to-blue-600"
@@ -19,7 +19,7 @@ const Services = memo(() => {
       icon: <Code className="w-8 h-8" />,
       title: "Data Engineering & Integration",
       subtitle: "Framework Accelerated",
-      description: "Ingestion, modelling and lineage—accelerated by our ingestion and MDM frameworks.",
+      description: "Streamline your data operations with our battle-tested ingestion and Master Data Management (MDM) frameworks. We eliminate the typical complexity of building data pipelines from scratch by leveraging our pre-built, configurable solutions that handle real-time and batch processing, automated data quality checks, and comprehensive lineage tracking. Our frameworks reduce development time by 60-80% while ensuring enterprise-grade reliability and scalability from day one.",
       features: ["Data Ingestion", "Data Modelling", "Data Lineage", "MDM Frameworks"],
       highlight: "Framework accelerated",
       color: "from-green-500 to-green-600"
@@ -28,7 +28,7 @@ const Services = memo(() => {
       icon: <Brain className="w-8 h-8" />,
       title: "AI & Copilot Enablement",
       subtitle: "NZ-Tuned Solutions",
-      description: "Secure, governed RAG solutions on Azure AI Foundry, Snowflake Cortex and Copilot extensions tuned to NZ data.",
+      description: "Deploy enterprise-ready AI solutions that understand New Zealand's unique data landscape, regulations, and business context. Our secure, governed RAG (Retrieval-Augmented Generation) implementations on Azure AI Foundry and Snowflake Cortex are specifically tuned for NZ organisations, ensuring compliance with local privacy laws while delivering contextually relevant AI insights. We extend Microsoft Copilot with custom connectors and domain-specific knowledge bases that speak your business language.",
       features: ["Azure AI Foundry", "Snowflake Cortex", "Copilot Extensions", "NZ Data Tuning"],
       highlight: "NZ-tuned AI",
       color: "from-purple-500 to-purple-600"
@@ -37,7 +37,7 @@ const Services = memo(() => {
       icon: <Settings className="w-8 h-8" />,
       title: "Managed Services",
       subtitle: "24×7 Reliability",
-      description: "24×7 monitoring, FinOps and continuous enhancement across data platforms for cost-efficient reliability.",
+      description: "Ensure your data platforms operate at peak performance with our comprehensive managed services. Our 24×7 monitoring covers performance, security, and cost optimisation across your entire data estate. Through proactive FinOps practices, we continuously optimise your cloud spend while maintaining performance SLAs. Our team provides continuous platform enhancement, security patching, and capacity planning—allowing your team to focus on deriving business value rather than managing infrastructure.",
       features: ["24×7 Monitoring", "FinOps Optimisation", "Continuous Enhancement", "Cost Efficiency"],
       highlight: "Always optimised",
       color: "from-orange-500 to-orange-600"
