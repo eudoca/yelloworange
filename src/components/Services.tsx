@@ -84,7 +84,7 @@ const Services = memo(() => {
                 className={`w-full text-left p-6 rounded-xl border transition-all duration-200 ${
                   activeService === index
                     ? 'border-primary-400 bg-primary-500/10 shadow-soft'
-                    : 'border-neutral-700 bg-neutral-800 hover:border-neutral-600 hover:shadow-soft card-interactive'
+                    : 'border-neutral-600 bg-neutral-700 hover:border-neutral-500 hover:shadow-soft card-interactive'
                 }`}
               >
                 <div className="flex items-center gap-4 mb-3">
@@ -112,7 +112,7 @@ const Services = memo(() => {
 
           {/* Active Service Details */}
           <div className="lg:col-span-8">
-            <div className="bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-xl p-8 border border-neutral-700 h-full">
+            <div className="bg-gradient-to-br from-neutral-700 to-neutral-800 rounded-xl p-8 border border-neutral-600 h-full">
               <div className="flex items-center gap-4 mb-6">
                 <div className={`p-4 rounded-lg bg-gradient-to-r ${currentService.color} text-white`}>
                   {currentService.icon}
@@ -131,7 +131,7 @@ const Services = memo(() => {
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {currentService.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-neutral-800 rounded-lg border border-neutral-700">
+                  <div key={index} className="flex items-center gap-3 p-3 bg-neutral-600 rounded-lg border border-neutral-500">
                     <CheckCircle className="w-5 h-5 text-primary-400 flex-shrink-0" />
                     <span className="text-neutral-200 font-medium">{feature}</span>
                   </div>
