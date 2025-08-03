@@ -137,8 +137,6 @@ const Hero = memo(() => {
         </div>
       </div>
       
-      {/* Shape Divider */}
-      <ShapeDivider type="gradient-wave" animated={true} flip={true} />
     </section>
   );
 });
