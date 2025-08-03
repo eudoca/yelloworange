@@ -7,39 +7,39 @@ const Services = memo(() => {
 
   const services = useMemo(() => [
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Advisory & Delivery Services",
-      subtitle: "Strategic Guidance",
-      description: "End-to-end data consulting from strategy to implementation with expert guidance.",
-      features: ["Data Strategy Development", "Implementation Roadmaps", "Best Practice Guidance", "Change Management"],
-      highlight: "From strategy to execution",
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Modern Azure Lake-house",
+      subtitle: "Migration Accelerated",
+      description: "Migrate legacy warehouses to Fabric, Synapse or Databricks in weeks, not months.",
+      features: ["Azure Fabric Migration", "Synapse Analytics", "Databricks Integration", "Legacy Modernisation"],
+      highlight: "Weeks, not months",
       color: "from-blue-500 to-blue-600"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI & LLM Services",
-      subtitle: "Intelligent Solutions",
-      description: "Enterprise-ready AI solutions including KeaAI - our powerful GenAI solution built on LLaMA.",
-      features: ["Custom AI Models", "KeaAI Platform", "ML Operations", "AI Strategy Consulting"],
-      highlight: "Powered by KeaAI",
-      color: "from-purple-500 to-purple-600"
+      icon: <Code className="w-8 h-8" />,
+      title: "Data Engineering & Integration",
+      subtitle: "Framework Accelerated",
+      description: "Ingestion, modelling and lineage—accelerated by our ingestion and MDM frameworks.",
+      features: ["Data Ingestion", "Data Modelling", "Data Lineage", "MDM Frameworks"],
+      highlight: "Framework accelerated",
+      color: "from-green-500 to-green-600"
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Platform Services",
-      subtitle: "Scalable Infrastructure",
-      description: "Pre-built Azure data warehouse solutions - Tīeke, Tūī, and Ruru platforms for every scale.",
-      features: ["Tīeke Platform", "Tūī Solutions", "Ruru Framework", "Azure Integration"],
-      highlight: "3 proven platforms",
-      color: "from-green-500 to-green-600"
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI & Copilot Enablement",
+      subtitle: "NZ-Tuned Solutions",
+      description: "Secure, governed RAG solutions on Azure AI Foundry, Snowflake Cortex and Copilot extensions tuned to NZ data.",
+      features: ["Azure AI Foundry", "Snowflake Cortex", "Copilot Extensions", "NZ Data Tuning"],
+      highlight: "NZ-tuned AI",
+      color: "from-purple-500 to-purple-600"
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Managed Services",
-      subtitle: "Ongoing Support",
-      description: "Ongoing support and management for optimal platform performance and growth.",
-      features: ["24/7 Monitoring", "Performance Optimization", "Regular Updates", "Dedicated Support"],
-      highlight: "Always optimized",
+      subtitle: "24×7 Reliability",
+      description: "24×7 monitoring, FinOps and continuous enhancement across data platforms for cost-efficient reliability.",
+      features: ["24×7 Monitoring", "FinOps Optimisation", "Continuous Enhancement", "Cost Efficiency"],
+      highlight: "Always optimised",
       color: "from-orange-500 to-orange-600"
     },
   ], []);
@@ -51,24 +51,24 @@ const Services = memo(() => {
   const currentService = useMemo(() => services[activeService], [services, activeService]);
 
   return (
-    <section id="services" className="section bg-white relative">
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary-100 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent-100 rounded-full blur-3xl"></div>
+    <section id="services" className="section bg-neutral-900 relative">
+      {/* Dark background decoration */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary-500/20 text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary-500/30">
             <Zap className="w-4 h-4" />
             Our Services
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             What We Do
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive data solutions designed to transform your organisation and unlock the full potential of your data
           </p>
         </div>
@@ -83,8 +83,8 @@ const Services = memo(() => {
                 onClick={() => handleServiceClick(index)}
                 className={`w-full text-left p-6 rounded-xl border transition-all duration-200 ${
                   activeService === index
-                    ? 'border-primary-300 bg-primary-50 shadow-soft'
-                    : 'border-neutral-200 bg-white hover:border-neutral-300 hover:shadow-soft card-interactive'
+                    ? 'border-primary-400 bg-primary-500/10 shadow-soft'
+                    : 'border-neutral-700 bg-neutral-800 hover:border-neutral-600 hover:shadow-soft card-interactive'
                 }`}
               >
                 <div className="flex items-center gap-4 mb-3">
@@ -93,15 +93,15 @@ const Services = memo(() => {
                   </div>
                   <div>
                     <h3 className={`font-semibold text-lg ${
-                      activeService === index ? 'text-primary-600' : 'text-neutral-900'
+                      activeService === index ? 'text-primary-300' : 'text-white'
                     }`}>
                       {service.title}
                     </h3>
-                    <p className="text-sm text-neutral-500">{service.subtitle}</p>
+                    <p className="text-sm text-neutral-400">{service.subtitle}</p>
                   </div>
                 </div>
                 <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
-                  activeService === index ? 'bg-primary-100 text-primary-700' : 'bg-neutral-100 text-neutral-600'
+                  activeService === index ? 'bg-primary-500/20 text-primary-300' : 'bg-neutral-700 text-neutral-300'
                 }`}>
                   <CheckCircle className="w-3 h-3" />
                   {service.highlight}
@@ -112,28 +112,28 @@ const Services = memo(() => {
 
           {/* Active Service Details */}
           <div className="lg:col-span-8">
-            <div className="bg-gradient-to-br from-neutral-50 to-white rounded-xl p-8 border border-neutral-200 h-full">
+            <div className="bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-xl p-8 border border-neutral-700 h-full">
               <div className="flex items-center gap-4 mb-6">
                 <div className={`p-4 rounded-lg bg-gradient-to-r ${currentService.color} text-white`}>
                   {currentService.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-neutral-900">
+                  <h3 className="text-2xl font-bold text-white">
                     {currentService.title}
                   </h3>
-                  <p className="text-neutral-500">{currentService.subtitle}</p>
+                  <p className="text-neutral-400">{currentService.subtitle}</p>
                 </div>
               </div>
 
-              <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
+              <p className="text-lg text-neutral-300 mb-8 leading-relaxed">
                 {currentService.description}
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {currentService.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-neutral-100">
-                    <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                    <span className="text-neutral-700 font-medium">{feature}</span>
+                  <div key={index} className="flex items-center gap-3 p-3 bg-neutral-800 rounded-lg border border-neutral-700">
+                    <CheckCircle className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                    <span className="text-neutral-200 font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -159,18 +159,18 @@ const Services = memo(() => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-neutral-200">
+        <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-neutral-700">
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-600 mb-2">100+</div>
-            <div className="text-neutral-600">Successful Projects</div>
+            <div className="text-4xl font-bold text-primary-400 mb-2">100+</div>
+            <div className="text-neutral-300">Successful Projects</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
-            <div className="text-neutral-600">Happy Clients</div>
+            <div className="text-4xl font-bold text-primary-400 mb-2">50+</div>
+            <div className="text-neutral-300">Happy Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-600 mb-2">8+</div>
-            <div className="text-neutral-600">Years Experience</div>
+            <div className="text-4xl font-bold text-primary-400 mb-2">8+</div>
+            <div className="text-neutral-300">Years Experience</div>
           </div>
         </div>
       </div>

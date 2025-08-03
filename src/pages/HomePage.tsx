@@ -24,7 +24,7 @@ export default function HomePage() {
       <Hero />
       
       <Services />
-      <ShapeDivider type="layered" color="white" animated={true} />
+      <ShapeDivider type="layered" color="#f8fafc" animated={true} />
       
       <div className="bg-slate-50">
         <ErrorBoundary>
