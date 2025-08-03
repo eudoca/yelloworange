@@ -20,7 +20,7 @@ const Hero = memo(() => {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary-50/30 pt-20">
+    <section className="relative bg-gradient-to-br from-neutral-50 via-white to-primary-50/30 pt-20 pb-8">
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full opacity-30 animate-pulse-gentle"></div>
@@ -30,10 +30,10 @@ const Hero = memo(() => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh] py-16">
           
           {/* Left side - Content */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Partner Logos */}
             <div className={`transform transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <div className="mb-6">
@@ -138,7 +138,7 @@ const Hero = memo(() => {
       </div>
       
       {/* Shape Divider */}
-      <ShapeDivider type="gradient-wave" animated={true} />
+      <ShapeDivider type="gradient-wave" animated={true} flip={true} />
     </section>
   );
 });
