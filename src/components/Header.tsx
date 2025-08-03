@@ -113,51 +113,50 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'border-b border-gray-400'
-          : ''
+          ? 'glass-header border-b border-neutral-200'
+          : 'bg-white/95 backdrop-blur-md'
       }`}
-      style={{ backgroundColor: '#ADBBD4' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <div className="flex-shrink-0 mr-8">
-            <Link to="/" className="flex items-center" aria-label="DataSing Home">
+          <div className="flex-shrink-0">
+            <Link 
+              to="/" 
+              className="flex items-center transition-transform duration-200 hover:scale-105" 
+              aria-label="DataSing Home"
+            >
               <img 
                 src="/datasing_logo.png" 
                 alt="DataSing" 
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 flex-1 justify-center" role="navigation" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center" role="navigation" aria-label="Main navigation">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.path}
-                  className={`font-medium transition-colors focus:outline-none focus:ring-2 px-2 py-1 ${
+                  className={`font-medium transition-all duration-200 px-3 py-2 rounded-lg ${
                     location.pathname === item.path
-                      ? 'border-b-2 text-gray-800'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'text-primary-600 bg-primary-50'
+                      : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50/50'
                   }`}
-                  style={{
-                    borderColor: location.pathname === item.path ? '#374151' : 'transparent',
-                    '--tw-ring-color': '#374151'
-                  } as any}
                   aria-current={location.pathname === item.path ? 'page' : undefined}
                 >
                   {item.name}
                 </Link>
                 {item.submenu && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2" role="menu" aria-label={`${item.name} submenu`}>
-                    <div className="py-2">
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-neutral-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2" role="menu" aria-label={`${item.name} submenu`}>
+                    <div className="py-1">
                       {item.submenu.map((subitem) => (
                         <Link
                           key={subitem.name}
                           to={subitem.path}
-                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors focus:outline-none focus:bg-gray-50 focus:text-black"
+                          className="block px-4 py-2 text-sm text-neutral-600 hover:bg-primary-50 hover:text-primary-600 transition-colors rounded-md mx-1"
                           role="menuitem"
                           onClick={closeMenus}
                         >
@@ -175,8 +174,7 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
           <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-              style={{ '--tw-ring-color': '#374151' } as any}
+              className="p-2 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all duration-200"
               aria-label="Toggle search"
               aria-expanded={isSearchOpen}
             >
@@ -184,7 +182,7 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
             </button>
             <Link
               to="/contact"
-              className="bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-900 transition-colors focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
+              className="btn btn-primary btn-md"
             >
               Contact
             </Link>
@@ -193,7 +191,7 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
+            className="lg:hidden p-2 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all duration-200"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
           >
@@ -214,32 +212,28 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <div className="bg-white border-t border-slate-100">
-          <nav className="px-4 py-6 space-y-4">
+        <div className="bg-white/95 backdrop-blur-md border-t border-neutral-200">
+          <nav className="px-4 py-6 space-y-2">
             {navigation.map((item) => (
               <div key={item.name}>
                 <Link
                   to={item.path}
-                  className={`block py-2 font-medium transition-colors ${
+                  className={`block px-3 py-2 font-medium rounded-lg transition-all duration-200 ${
                     location.pathname === item.path
-                      ? 'border-b-2'
-                      : 'hover:text-black'
+                      ? 'text-primary-600 bg-primary-50'
+                      : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50/50'
                   }`}
-                  style={{
-                    color: location.pathname === item.path ? '#0BA6E8' : '#5F607A',
-                    borderColor: location.pathname === item.path ? '#0BA6E8' : 'transparent'
-                  } as any}
                   onClick={closeMenus}
                 >
                   {item.name}
                 </Link>
                 {item.submenu && (
-                  <div className="ml-4 mt-2 space-y-2">
+                  <div className="ml-6 mt-2 space-y-1">
                     {item.submenu.map((subitem) => (
                       <Link
                         key={subitem.name}
                         to={subitem.path}
-                        className="block py-1 text-sm text-gray-600 hover:text-black transition-colors"
+                        className="block px-3 py-1 text-sm text-neutral-600 hover:text-primary-600 hover:bg-primary-50/50 rounded-md transition-colors"
                         onClick={closeMenus}
                       >
                         {subitem.name}
@@ -249,10 +243,10 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
                 )}
               </div>
             ))}
-            <div className="pt-4 border-t border-slate-100">
+            <div className="pt-4 border-t border-neutral-200">
               <Link
                 to="/contact"
-                className="btn-primary block text-center"
+                className="btn btn-primary btn-md w-full"
                 onClick={closeMenus}
               >
                 Contact
@@ -264,7 +258,7 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
 
       {/* Search Overlay */}
       {isSearchOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-slate-100 z-50">
+        <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-neutral-200 z-50">
           <div className="max-w-3xl mx-auto p-6">
             <div className="relative">
               <input
@@ -272,10 +266,10 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
                 placeholder="Search services, about us, contact..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
                 autoFocus
               />
-              <Search className="absolute right-3 top-3 w-5 h-5 text-slate-400" />
+              <Search className="absolute right-3 top-3 w-5 h-5 text-neutral-400" />
             </div>
             
             {searchResults.length > 0 && (
@@ -285,17 +279,17 @@ const Header = memo(({ isScrolled }: HeaderProps) => {
                     key={index}
                     to={result.path}
                     onClick={() => handleSearchResultClick(result.path)}
-                    className="block w-full p-3 text-left border border-gray-200 hover:bg-gray-50 hover:border-black transition-colors"
+                    className="block w-full p-3 text-left border border-neutral-200 rounded-lg hover:bg-primary-50 hover:border-primary-300 transition-all duration-200"
                   >
-                    <div className="font-medium text-black">{result.title}</div>
-                    <div className="text-sm text-gray-600 mt-1">{result.content}</div>
+                    <div className="font-medium text-neutral-900">{result.title}</div>
+                    <div className="text-sm text-neutral-600 mt-1">{result.content}</div>
                   </Link>
                 ))}
               </div>
             )}
             
             {debouncedQuery && searchResults.length === 0 && (
-              <div className="mt-4 p-3 text-center text-slate-500">
+              <div className="mt-4 p-3 text-center text-neutral-500">
                 No results found for "{debouncedQuery}"
               </div>
             )}

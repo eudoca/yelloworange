@@ -51,24 +51,24 @@ const Services = memo(() => {
   const currentService = useMemo(() => services[activeService], [services, activeService]);
 
   return (
-    <section id="services" className="py-20 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl"></div>
+    <section id="services" className="section bg-white relative">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary-100 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent-100 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="container relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Zap className="w-4 h-4" />
             Our Services
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0BA6E8' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900">
             What We Do
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive data solutions designed to transform your organization and unlock the full potential of your data
           </p>
         </div>
@@ -76,30 +76,32 @@ const Services = memo(() => {
         {/* Interactive Service Showcase */}
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
           {/* Service Navigation */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-3">
             {services.map((service, index) => (
               <button
                 key={index}
                 onClick={() => handleServiceClick(index)}
-                className={`w-full text-left p-6 rounded-2xl border-2 transition-all duration-300 transform hover:scale-[1.02] ${
+                className={`w-full text-left p-6 rounded-xl border transition-all duration-200 ${
                   activeService === index
-                    ? 'border-blue-500 bg-blue-50 shadow-lg'
-                    : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-md'
+                    ? 'border-primary-300 bg-primary-50 shadow-soft'
+                    : 'border-neutral-200 bg-white hover:border-neutral-300 hover:shadow-soft card-interactive'
                 }`}
               >
                 <div className="flex items-center gap-4 mb-3">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color} text-white`}>
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg" style={{ color: activeService === index ? '#0BA6E8' : '#374151' }}>
+                    <h3 className={`font-semibold text-lg ${
+                      activeService === index ? 'text-primary-600' : 'text-neutral-900'
+                    }`}>
                       {service.title}
                     </h3>
-                    <p className="text-sm text-gray-500">{service.subtitle}</p>
+                    <p className="text-sm text-neutral-500">{service.subtitle}</p>
                   </div>
                 </div>
                 <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
-                  activeService === index ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-600'
+                  activeService === index ? 'bg-primary-100 text-primary-700' : 'bg-neutral-100 text-neutral-600'
                 }`}>
                   <CheckCircle className="w-3 h-3" />
                   {service.highlight}
@@ -110,28 +112,28 @@ const Services = memo(() => {
 
           {/* Active Service Details */}
           <div className="lg:col-span-8">
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 h-full">
+            <div className="bg-gradient-to-br from-neutral-50 to-white rounded-xl p-8 border border-neutral-200 h-full">
               <div className="flex items-center gap-4 mb-6">
-                <div className={`p-4 rounded-xl bg-gradient-to-r ${currentService.color} text-white`}>
+                <div className={`p-4 rounded-lg bg-gradient-to-r ${currentService.color} text-white`}>
                   {currentService.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold" style={{ color: '#0BA6E8' }}>
+                  <h3 className="text-2xl font-bold text-neutral-900">
                     {currentService.title}
                   </h3>
-                  <p className="text-gray-500">{currentService.subtitle}</p>
+                  <p className="text-neutral-500">{currentService.subtitle}</p>
                 </div>
               </div>
 
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
                 {currentService.description}
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {currentService.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-100">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{feature}</span>
+                  <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-neutral-100">
+                    <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                    <span className="text-neutral-700 font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -139,14 +141,14 @@ const Services = memo(() => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/what-we-do"
-                  className="group inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="btn btn-primary btn-md group"
                 >
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300"
+                  className="btn btn-secondary btn-md group"
                 >
                   <Users className="mr-2 w-4 h-4" />
                   Get Started
@@ -157,18 +159,18 @@ const Services = memo(() => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-gray-200">
+        <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-neutral-200">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
-            <div className="text-gray-600">Successful Projects</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">100+</div>
+            <div className="text-neutral-600">Successful Projects</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-            <div className="text-gray-600">Happy Clients</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
+            <div className="text-neutral-600">Happy Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
-            <div className="text-gray-600">Years Experience</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">8+</div>
+            <div className="text-neutral-600">Years Experience</div>
           </div>
         </div>
       </div>

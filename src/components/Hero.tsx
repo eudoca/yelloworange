@@ -20,46 +20,34 @@ const Hero = memo(() => {
   }, []);
 
   return (
-    <section className="relative min-h-screen pt-24" style={{ backgroundColor: '#ADBBD4' }}>
-      {/* Reduced Size Hero Image */}
-      <div className="absolute inset-0 pt-24 flex justify-center items-center">
-        <img 
-          src="/datasing_hero.jpg" 
-          alt="DataSing - Data Analytics and AI Solutions"
-          className={`w-3/5 h-3/5 object-cover rounded-lg transition-opacity duration-500 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading="eager"
-          onLoad={handleImageLoad}
-          onError={handleImageError}
-        />
-        {!imageLoaded && (
-          <div className="w-3/5 h-3/5 bg-gray-300 animate-pulse rounded-lg flex items-center justify-center">
-            <div className="text-gray-500 text-lg">Loading...</div>
-          </div>
-        )}
+    <section className="relative min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary-50/30 pt-20">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full opacity-30 animate-pulse-gentle"></div>
+        <div className="absolute top-1/2 -left-40 w-64 h-64 bg-accent-100 rounded-full opacity-20 animate-float"></div>
+        <div className="absolute bottom-20 right-1/4 w-32 h-32 bg-primary-200 rounded-full opacity-25"></div>
       </div>
 
-      {/* Content overlay */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
           
-          {/* Left side - Content with white transparent box */}
-          <div className="max-w-2xl space-y-8 bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/50">
+          {/* Left side - Content */}
+          <div className="space-y-8">
             {/* Partner Logos */}
             <div className={`transform transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <div className="bg-white rounded-2xl p-6 shadow-lg mb-8 border border-gray-100">
-                <div className="flex items-center gap-6">
-                  <span className="text-sm font-medium text-gray-600">Certified Partners</span>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-sm font-medium text-neutral-600">Trusted by industry leaders</span>
+                <div className="flex items-center gap-4">
                   <img 
                     src="/microsoft-partner-logo.png" 
                     alt="Microsoft Partner" 
-                    className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
                   />
                   <img 
                     src="/snowflake-partner-logo.png" 
                     alt="Snowflake Partner" 
-                    className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
@@ -67,29 +55,28 @@ const Hero = memo(() => {
 
             {/* Main Headline */}
             <div className={`transform transition-all duration-700 delay-200 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6" style={{ color: '#0BA6E8' }}>
-                It's your
-                <span className="block text-yellow-500">data.</span>
-                <span className="block text-4xl md:text-5xl lg:text-6xl font-normal mt-2" style={{ color: '#0BA6E8' }}>
-                  We'll help you get value from it.
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-neutral-900">
+                It's your{' '}
+                <span className="text-accent-500">data.</span>
+                <span className="block text-primary-600 text-4xl md:text-5xl lg:text-6xl font-semibold mt-2">
+                  We'll help you unlock its value.
                 </span>
               </h1>
             </div>
 
             {/* Description */}
             <div className={`transform transition-all duration-700 delay-400 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <p className="text-xl md:text-2xl leading-relaxed max-w-lg mb-8" style={{ color: '#0BA6E8' }}>
-                DataSing helps you build your data and analytical capabilities in a simple, secure and affordable way.
+              <p className="text-xl md:text-2xl leading-relaxed text-neutral-600 max-w-2xl">
+                Transform your organization with enterprise-grade data analytics and AI solutions. 
+                Simple, secure, and scalable.
               </p>
-              
             </div>
 
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-700 delay-600 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <Link
                 to="/contact"
-                className="group bg-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-gray-50 hover:shadow-lg transform hover:-translate-y-0.5 flex items-center justify-center"
-                style={{ color: '#0BA6E8' }}
+                className="btn btn-primary btn-lg group"
               >
                 See a Demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -97,8 +84,7 @@ const Hero = memo(() => {
               
               <Link
                 to="/what-we-do"
-                className="group border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/20 backdrop-blur-md transform hover:-translate-y-0.5 flex items-center justify-center"
-                style={{ borderColor: '#0BA6E8', color: '#0BA6E8' }}
+                className="btn btn-outline btn-lg"
               >
                 Explore Solutions
               </Link>
@@ -106,28 +92,58 @@ const Hero = memo(() => {
 
           </div>
 
-          {/* Floating stats cards positioned over the image */}
-          <div className="absolute right-8 top-1/4 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-6 transform rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 animate-float border border-gray-200">
-            <div className="text-blue-600 font-bold text-3xl mb-1">100+</div>
-            <div className="text-gray-700 text-sm font-medium">Projects Delivered</div>
-            <div className="w-full h-1 mt-2 rounded-full bg-blue-600/30"></div>
-          </div>
-          
-          <div className="absolute right-16 bottom-1/4 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-6 transform -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 animate-float border border-gray-200" style={{ animationDelay: '1.5s' }}>
-            <div className="text-blue-600 font-bold text-3xl mb-1">50+</div>
-            <div className="text-gray-700 text-sm font-medium">Happy Clients</div>
-            <div className="w-full h-1 mt-2 rounded-full bg-blue-600/30"></div>
-          </div>
-
-          {/* Floating icon elements */}
-          <div className="absolute right-4 top-1/2 bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-3 border border-gray-200">
-            <BarChart3 className="w-6 h-6 text-blue-600" />
+          {/* Right side - Visual */}
+          <div className="relative lg:block hidden">
+            {/* Modern data visualization placeholder */}
+            <div className="relative">
+              <div className="bg-white rounded-2xl p-8 shadow-soft border border-neutral-200">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-neutral-900">Analytics Dashboard</h3>
+                    <BarChart3 className="w-6 h-6 text-primary-500" />
+                  </div>
+                  
+                  {/* Fake chart bars */}
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="text-sm text-neutral-600 w-16">Jan</div>
+                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
+                        <div className="bg-primary-500 h-2 rounded-full w-3/4"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-sm text-neutral-600 w-16">Feb</div>
+                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
+                        <div className="bg-primary-500 h-2 rounded-full w-4/5"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-sm text-neutral-600 w-16">Mar</div>
+                      <div className="flex-1 bg-neutral-100 rounded-full h-2">
+                        <div className="bg-accent-500 h-2 rounded-full w-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating stats cards */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-medium p-4 border border-neutral-200 animate-float">
+                <div className="text-primary-600 font-bold text-2xl">100+</div>
+                <div className="text-neutral-600 text-sm">Projects</div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-medium p-4 border border-neutral-200 animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="text-accent-600 font-bold text-2xl">50+</div>
+                <div className="text-neutral-600 text-sm">Clients</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
       {/* Shape Divider */}
-      <ShapeDivider type="tilt" color="white" flip={true} />
+      <ShapeDivider type="curve" color="white" />
     </section>
   );
 });
