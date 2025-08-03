@@ -107,7 +107,7 @@ function WhatWeDo() {
     <>
       <Helmet>
         <title>What We Do - DataSing</title>
-        <meta name="description" content="Comprehensive data consulting services from strategy to implementation. We help organizations transform their data capabilities." />
+        <meta name="description" content="Comprehensive data consulting services from strategy to implementation. We help organisations transform their data capabilities." />
       </Helmet>
 
       {/* Hero Section */}
@@ -118,7 +118,7 @@ function WhatWeDo() {
               What We Do
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive data and analytics consulting services to help organizations 
+              We provide comprehensive data and analytics consulting services to help organisations 
               become truly data-driven. From strategy to implementation, we're your trusted partner 
               in digital transformation.
             </p>
@@ -134,7 +134,7 @@ function WhatWeDo() {
               Consulting Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              End-to-end data consulting services designed to transform your organization's data capabilities.
+              End-to-end data consulting services designed to transform your organisation's data capabilities.
             </p>
           </div>
 

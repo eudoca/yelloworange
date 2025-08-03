@@ -64,7 +64,7 @@ export default function AIServices() {
               KeaAI: Enterprise AI at Scale
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our flagship AI solution designed for organizations that want to use generative AI on a large scale with security and governance built in.
+              Our flagship AI solution designed for organisations that want to use generative AI on a large scale with security and governance built in.
             </p>
           </div>
           
@@ -103,7 +103,7 @@ export default function AIServices() {
                 </p>
                 
                 <p className="text-gray-600 leading-relaxed">
-                  While many organizations are still in Proof of Concept mode, DataSing focuses on the 'last mile' - making AI ready for real-world use with automated controls and governance.
+                  While many organisations are still in Proof of Concept mode, DataSing focuses on the 'last mile' - making AI ready for real-world use with automated controls and governance.
                 </p>
                 
                 <div className="space-y-4 mt-6">
@@ -137,7 +137,7 @@ export default function AIServices() {
               AI Applications
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Practical AI solutions to solve real-world business challenges across your organization.
+              Practical AI solutions to solve real-world business challenges across your organisation.
             </p>
           </div>
           
@@ -237,7 +237,7 @@ export default function AIServices() {
               },
               {
                 title: "Usage Monitoring",
-                description: "Track and analyze AI usage across your organization with detailed reporting",
+                description: "Track and analyze AI usage across your organisation with detailed reporting",
                 icon: "📊"
               },
               {

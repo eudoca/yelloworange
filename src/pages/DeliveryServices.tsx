@@ -275,7 +275,7 @@ export default function DeliveryServices() {
               Proven Results
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we've helped organizations transform their data capabilities and achieve measurable business outcomes.
+              See how we've helped organisations transform their data capabilities and achieve measurable business outcomes.
             </p>
           </div>
 

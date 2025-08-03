@@ -56,7 +56,7 @@ export default function PlatformServices() {
         { title: 'Simple Database', description: 'Well-structured data warehouse with optimized schemas for business reporting.' },
         { title: 'Data Factory', description: 'Azure Data Factory workflows for automated data processing and integration.' },
         { title: 'Real-time Insights', description: 'Near real-time analytics capabilities for timely business intelligence.' },
-        { title: 'Easily Scalable', description: 'Flexible architecture that grows alongside your organization\'s needs.' },
+        { title: 'Easily Scalable', description: 'Flexible architecture that grows alongside your organisation\'s needs.' },
         { title: 'Visualization Ready', description: 'Pre-configured connectors for popular BI tools like Power BI and Tableau.' }
       ],
       benefits: [
@@ -184,7 +184,7 @@ export default function PlatformServices() {
               Our Platform Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choose the right data platform that fits your organization's size, budget, and analytical needs.
+              Choose the right data platform that fits your organisation's size, budget, and analytical needs.
             </p>
           </div>
           
@@ -290,7 +290,7 @@ export default function PlatformServices() {
               Platform Comparison
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Compare our data platform offerings to find the perfect fit for your organization.
+              Compare our data platform offerings to find the perfect fit for your organisation.
             </p>
           </div>
           

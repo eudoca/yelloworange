@@ -32,7 +32,7 @@ function Clients() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-slate-600">
-            Trusted by organizations across New Zealand
+            Trusted by organisations across New Zealand
           </p>
         </div>
 

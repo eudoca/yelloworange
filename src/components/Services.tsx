@@ -69,7 +69,7 @@ const Services = memo(() => {
             What We Do
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive data solutions designed to transform your organization and unlock the full potential of your data
+            Comprehensive data solutions designed to transform your organisation and unlock the full potential of your data
           </p>
         </div>
 

@@ -67,7 +67,7 @@ function Solutions() {
             DataSing's Turn-Key Solutions
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Fixed-price Azure pre-built data warehouse solutions designed to streamline data storage, organization, and analytics
+            Fixed-price Azure pre-built data warehouse solutions designed to streamline data storage, organisation, and analytics
           </p>
         </div>
 

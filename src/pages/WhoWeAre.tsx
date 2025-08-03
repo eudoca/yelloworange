@@ -13,7 +13,7 @@ function WhoWeAre() {
     {
       name: "Sarah Mitchell",
       role: "Managing Director & Founder",
-      bio: "20+ years in data architecture and analytics, former Microsoft Azure architect. Passionate about helping organizations realize the value of their data.",
+      bio: "20+ years in data architecture and analytics, former Microsoft Azure architect. Passionate about helping organisations realize the value of their data.",
       expertise: ["Data Strategy", "Azure Architecture", "Digital Transformation"],
       image: "/api/placeholder/300/300"
     },
@@ -99,7 +99,7 @@ function WhoWeAre() {
     <>
       <Helmet>
         <title>Who We Are - DataSing</title>
-        <meta name="description" content="Meet the DataSing team - experienced data professionals passionate about helping organizations transform through data." />
+        <meta name="description" content="Meet the DataSing team - experienced data professionals passionate about helping organisations transform through data." />
       </Helmet>
 
       {/* Hero Section */}
@@ -110,7 +110,7 @@ function WhoWeAre() {
               Who We Are
             </h1>
             <p className="text-lg max-w-3xl mx-auto" style={{ color: '#5F607A' }}>
-              We're a team of passionate data professionals dedicated to helping organizations 
+              We're a team of passionate data professionals dedicated to helping organisations 
               unlock the full potential of their data. With deep technical expertise and strong 
               industry knowledge, we deliver solutions that drive real business outcomes.
             </p>
@@ -146,7 +146,7 @@ function WhoWeAre() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  DataSing was founded in 2016 with a simple mission: to help organizations 
+                  DataSing was founded in 2016 with a simple mission: to help organisations 
                   become truly data-driven. We saw too many companies struggling with data 
                   silos, outdated infrastructure, and analytics that didn't deliver actionable insights.
                 </p>
@@ -157,7 +157,7 @@ function WhoWeAre() {
                   ensuring that every solution we deliver creates measurable value.
                 </p>
                 <p>
-                  Today, we're proud to be trusted partners to organizations across utilities, 
+                  Today, we're proud to be trusted partners to organisations across utilities, 
                   transport, property, education, health, government, and financial services. 
                   Our commitment to excellence and innovation continues to drive everything we do.
                 </p>
@@ -166,13 +166,13 @@ function WhoWeAre() {
             <div className="bg-gray-50 p-8 border border-gray-200">
               <h3 className="text-xl font-semibold mb-6" style={{ color: '#5F607A' }}>Our Mission</h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                To empower organizations with data solutions that are speedy to implement, 
+                To empower organisations with data solutions that are speedy to implement, 
                 savvy in design, and safe by default. We believe that great data solutions 
                 should be accessible, reliable, and transformative.
               </p>
               <h3 className="text-xl font-semibold mb-6" style={{ color: '#5F607A' }}>Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                A world where every organization can harness the full power of their data 
+                A world where every organisation can harness the full power of their data 
                 to make better decisions, improve outcomes, and create positive impact.
               </p>
             </div>

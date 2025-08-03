@@ -83,7 +83,7 @@ function Industries() {
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Health",
-      description: "Improve patient outcomes, reduce costs, and enhance operational efficiency in healthcare organizations.",
+      description: "Improve patient outcomes, reduce costs, and enhance operational efficiency in healthcare organisations.",
       challenges: [
         "Patient outcome prediction",
         "Resource capacity planning",
@@ -230,7 +230,7 @@ function Industries() {
               Industry Success Stories
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Real-world examples of how we've helped organizations transform their data capabilities 
+              Real-world examples of how we've helped organisations transform their data capabilities 
               and achieve measurable business outcomes.
             </p>
           </div>

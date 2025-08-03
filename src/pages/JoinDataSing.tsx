@@ -80,7 +80,7 @@ function JoinDataSing() {
               Join DataSing
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Be part of a team that's transforming how organizations use data. 
+              Be part of a team that's transforming how organisations use data. 
               Work on challenging projects, learn cutting-edge technologies, 
               and make a real impact with talented colleagues.
             </p>

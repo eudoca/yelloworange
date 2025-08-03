@@ -64,7 +64,7 @@ export default function DeliveryServices() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 font-manrope">Data Architecture</h3>
-                <p className="text-gray-600 mb-4">We design robust data architectures that scale with your business, ensuring data flows efficiently throughout your organization.</p>
+                <p className="text-gray-600 mb-4">We design robust data architectures that scale with your business, ensuring data flows efficiently throughout your organisation.</p>
                 <a href="#" className="text-dark-green hover:text-dark-green/80 font-medium inline-flex items-center">
                   Learn more
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@ export default function DeliveryServices() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 font-manrope">Data Governance</h3>
-                <p className="text-gray-600 mb-4">Implement robust data governance frameworks that ensure data quality, security, and compliance across your organization.</p>
+                <p className="text-gray-600 mb-4">Implement robust data governance frameworks that ensure data quality, security, and compliance across your organisation.</p>
                 <a href="#" className="text-dark-green hover:text-dark-green/80 font-medium inline-flex items-center">
                   Learn more
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

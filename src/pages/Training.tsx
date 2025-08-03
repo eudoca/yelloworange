@@ -23,7 +23,7 @@ function Training() {
       title: "Data Governance",
       duration: "1 day",
       level: "Intermediate",
-      description: "Establish effective data governance frameworks and policies for your organization.",
+      description: "Establish effective data governance frameworks and policies for your organisation.",
       topics: ["Governance Strategy", "Data Quality", "Privacy & Compliance", "Stewardship Programs"]
     },
     {
@@ -51,7 +51,7 @@ function Training() {
       title: "Data Literacy",
       duration: "Half day",
       level: "Beginner",
-      description: "Fundamental data literacy skills for all organizational levels.",
+      description: "Fundamental data literacy skills for all organisational levels.",
       topics: ["Data Fundamentals", "Reading Charts & Graphs", "Statistical Basics", "Critical Thinking"]
     }
   ];
@@ -87,7 +87,7 @@ function Training() {
     },
     {
       title: "Leading Data Transformation",
-      description: "Leadership skills for driving organizational change and data transformation initiatives."
+      description: "Leadership skills for driving organisational change and data transformation initiatives."
     },
     {
       title: "Stakeholder Management",
@@ -158,7 +158,7 @@ function Training() {
                 Private Training
               </h3>
               <p className="text-gray-600">
-                Customized training programs delivered at your organization, 
+                Customized training programs delivered at your organisation, 
                 tailored to your specific needs and context.
               </p>
             </div>
@@ -200,7 +200,7 @@ function Training() {
               Private Data & Analytics Training
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive training courses designed for teams and organizations. 
+              Comprehensive training courses designed for teams and organisations. 
               All courses can be customized to your specific requirements.
             </p>
           </div>

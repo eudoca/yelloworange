@@ -72,7 +72,7 @@ const Hero = memo(() => {
             {/* Description */}
             <div className={`transform transition-all duration-700 delay-400 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <p className="text-xl md:text-2xl leading-relaxed text-neutral-600 max-w-2xl">
-                Transform your organization with enterprise-grade data analytics and AI solutions. 
+                Transform your organisation with enterprise-grade data analytics and AI solutions. 
                 Simple, secure, and scalable.
               </p>
             </div>

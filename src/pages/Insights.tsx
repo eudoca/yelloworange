@@ -55,7 +55,7 @@ function Insights() {
     },
     {
       title: "Building a Data-Driven Culture: A Practical Guide",
-      excerpt: "Strategies for fostering data literacy and building a truly data-driven organizational culture.",
+      excerpt: "Strategies for fostering data literacy and building a truly data-driven organisational culture.",
       author: "Sarah Mitchell",
       date: "February 15, 2024",
       category: "Data Strategy",
