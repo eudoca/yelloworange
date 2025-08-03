@@ -83,7 +83,7 @@ const Hero = memo(() => {
                 to="/contact"
                 className="btn btn-primary btn-lg group"
               >
-                See a Demo
+                Contact Us
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               
