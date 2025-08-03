@@ -38,21 +38,21 @@ const Hero = memo(() => {
             <div className={`transform transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-sm font-medium text-neutral-600">Trusted by industry leaders</span>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-6">
                   <img 
                     src="/microsoft-partner-logo.png" 
                     alt="Microsoft Partner" 
-                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    className="h-8 w-auto opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                   />
                   <img 
                     src="/snowflake-partner-logo.png" 
                     alt="Snowflake Partner" 
-                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    className="h-8 w-auto opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                   />
                   <img 
                     src="/databricks-partner.png" 
                     alt="Databricks Partner" 
-                    className="h-6 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    className="h-8 w-auto opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               </div>
