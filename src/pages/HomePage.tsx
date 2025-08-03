@@ -24,7 +24,7 @@ export default function HomePage() {
       <Hero />
       
       <Services />
-      <ShapeDivider type="tilt" color="white" />
+      <ShapeDivider type="layered" color="white" animated={true} />
       
       <div className="bg-slate-50">
         <ErrorBoundary>
@@ -33,7 +33,7 @@ export default function HomePage() {
           </Suspense>
         </ErrorBoundary>
       </div>
-      <ShapeDivider type="curve" color="#f8fafc" />
+      <ShapeDivider type="wave" color="#f8fafc" animated={true} />
       
       <div className="bg-gray-50">
         <ErrorBoundary>
@@ -42,7 +42,7 @@ export default function HomePage() {
           </Suspense>
         </ErrorBoundary>
       </div>
-      <ShapeDivider type="wave" color="#f9fafb" />
+      <ShapeDivider type="gradient-wave" flip={true} />
       
       <div className="bg-emerald-50">
         <ErrorBoundary>
@@ -51,14 +51,14 @@ export default function HomePage() {
           </Suspense>
         </ErrorBoundary>
       </div>
-      <ShapeDivider type="tilt" color="#ecfdf5" flip={true} />
+      <ShapeDivider type="layered" color="#ecfdf5" flip={true} animated={true} />
       
       <ErrorBoundary>
         <Suspense fallback={<LoadingSpinner />}>
           <Solutions />
         </Suspense>
       </ErrorBoundary>
-      <ShapeDivider type="curve" color="white" flip={true} />
+      <ShapeDivider type="wave" color="white" flip={true} animated={true} />
       
       <div className="bg-slate-50">
         <ErrorBoundary>
@@ -67,7 +67,7 @@ export default function HomePage() {
           </Suspense>
         </ErrorBoundary>
       </div>
-      <ShapeDivider type="wave" color="#f8fafc" flip={true} />
+      <ShapeDivider type="gradient-wave" flip={true} />
       
       <ErrorBoundary>
         <Suspense fallback={<LoadingSpinner />}>
