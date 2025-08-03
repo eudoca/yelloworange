@@ -36,8 +36,13 @@ const Hero = memo(() => {
           <div className="space-y-8">
             {/* Partner Logos */}
             <div className={`transform transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-sm font-medium text-neutral-600">Our Partner Network</span>
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-primary-200">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  Our Partner Network
+                </div>
                 <div className="flex items-center gap-6">
                   <img 
                     src="/microsoft-partner-logo.png" 
